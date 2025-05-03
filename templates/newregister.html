@@ -1,0 +1,93 @@
+{% extends "newbase.html" %}
+
+{% block title %} New Register {% endblock%}
+{% block content %}
+
+
+<form name="signup_form" action="/user/signup" method="post"></form>
+<div class="card-wrapper pt-5 pb-5">
+
+    <div class="text-section" align="center">
+        <h2> 歡迎來到您的FRSTP </h2>
+    </div>
+
+    <div class="card p-3" style="background-color: moccasin;">
+        <h3 class="card-title" align="center"> 註冊 </h3>
+        <br></br>
+        <div class="container">
+
+            <form name="signup_form">
+
+                <!--Name-->
+                <div class="form-floating form-group">
+
+                    <input type="text" class="form-control" id="name" name="name" placeholder="example_name" required>
+                    <label for="name"> 名字 </label>
+                </div>
+
+                <!--Email-->
+                <div class="form-floating form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com"
+                        required>
+                    <label for="email"> 郵件 </label>
+                </div>
+
+                <!--Password-->
+                <div class="form-floating form-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="password"
+                        required>
+                    <label for="password"> 密碼 </label>
+                </div>
+
+                <!--ConfirmPassword-->
+                <div class="form-floating form-group">
+                    <input type="password" class="form-control" id="password_confirm" name="password_confirm"
+                        placeholder="password_confirm" required>
+                    <label for="password_confirm"> 確認密碼d </label>
+                </div>
+
+                <!--Phone-->
+                <div class="form-floating form-group">
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="09XX-XXX-XXX" required>
+                    <label for="phone"> 電話號碼 </label>
+                </div>
+
+                <!--Address-->
+                <div class="form-floating form-group">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="address" required>
+                    <label for="address"> 地址 </label>
+                </div>
+
+
+                <!--Gender-->
+                <div class="form-floating form-group">
+                    <select class="form-select" aria-label="select gender" id="gender" name="gender">
+                        <option value="male"> 男性 </option>
+                        <option value="female"> 女性 </option>
+                        <option value="other"> 其他 </option>
+                    </select>
+                    <label for="gender"> 選擇您的性別 </label>
+                </div>
+
+                <!--Birthday-->
+                <div class="form-floating form-group">
+                    <input type="date" class="form-control" id="birthday" name="birthday" placeholder="address">
+                    <label for="birthday"> 生日 </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-3 me-2"> 確認 </button>
+                <button type="reset" class="btn btn-secondary mt-3"> 清除全部 </button>
+
+                <a href="/user/login" class="forgot-password">
+                    <center>已有帳號?</center>
+                </a>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+
+{% endblock %}

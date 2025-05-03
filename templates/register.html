@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %} Register | FRSTP {% endblock %}
+
+{% block content %}
+
+<div class="card shadow mx-auto">
+    <h2 class="card-title text-center mt-3"> 創立自己的帳號 </h2>
+
+    <form method="POST" name="signup_form">
+
+        <!--Name-->
+        <div class="form-floating form-group mt-1">
+
+            <input type="text" class="form-control" id="name" name="name" placeholder="example_name" required>
+            <label for="name"> 名字 </label>
+        </div>
+
+        <!--Email-->
+        <div class="form-floating form-group mt-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" required>
+            <label for="email"> 郵件 </label>
+        </div>
+
+        <!--Password-->
+        <div class="form-floating form-group mt-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+            <label for="password"> 密碼 </label>
+        </div>
+
+        <!--ConfirmPassword-->
+        <div class="form-floating form-group mt-3">
+            <input type="password" class="form-control" id="password_confirm" name="password_confirm"
+                placeholder="password_confirm" required>
+            <label for="password_confirm"> 確認密碼 </label>
+        </div>
+
+        <!--Phone-->
+        <div class="form-floating form-group mt-3">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="09XX-XXX-XXX" required>
+            <label for="phone"> 電話號碼 </label>
+        </div>
+
+        <!--Address-->
+        <div class="form-floating form-group mt-3">
+            <input type="text" class="form-control" id="address" name="address" placeholder="address" required>
+            <label for="address"> 地址 </label>
+        </div>
+
+
+        <!--Gender-->
+        <div class="form-floating form-group mt-3">
+            <select class="form-select" aria-label="select gender" id="gender" name="gender">
+                <option value="Male"> 男性 </option>
+                <option value="Female"> 女性 </option>
+                <option value="Other"> 其他 </option>
+            </select>
+            <label for="gender"> 選擇您的性別 </label>
+        </div>
+
+        <!--Birthday-->
+        <div class="form-floating form-group mt-3">
+            <input type="date" class="form-control" id="birthday" name="birthday" placeholder="address">
+            <label for="birthday"> 生日 </label>
+        </div>
+
+        <p class="error error--hidden mt-3 mb-0"></p>
+
+        <div class="text-center mt-3 mb-0">
+            <button type="submit" class="btn btn-primary signin-confirm shadow"> 註冊 </button>
+            <!--button type="reset" class="btn btn-secondary mt-3"> Clear All </button-->
+        </div>
+
+    </form>
+
+    <hr class="custom-line">
+
+    <div class="text-center">
+        <a class="btn btn-secondary shadow-lg" href="/user/login" role="button"> 已有帳號 </a>
+    </div>
+
+</div>
+
+<br><br><br><br>
+
+{% endblock %}
