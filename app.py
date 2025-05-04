@@ -342,7 +342,7 @@ def admin():
 @app.route("/test")
 def test_admin():
     print("reaching for test.html")
-    return render_template("test.html", members=members)
+    #return render_template("test.html", members=members)
     return render_template("test.html")
 
 
